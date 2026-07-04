@@ -8,7 +8,7 @@
     <!-- リンク共有時に写真を確実に表示させるための設定（OGP） -->
     <meta property="og:title" content="GENTLEMEN'S GATHERING | 男子会のご案内">
     <meta property="og:description" content="新たな夫婦の門出を祝しまして、男子会を開催いたします。皆様のご参加を心よりお待ちしております。">
-    <meta property="og:image" content="https://junsuzu14-arch.github.io/danshikai/main.jpg?v=4">
+    <meta property="og:image" content="https://junsuzu14-arch.github.io/danshikai/main.jpg?v=5">
     <meta property="og:url" content="https://junsuzu14-arch.github.io/danshikai/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="男子会のご案内">
@@ -16,7 +16,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GENTLEMEN'S GATHERING | 男子会のご案内">
     <meta name="twitter:description" content="新たな夫婦の門出を祝しまして、男子会を開催いたします。">
-    <meta name="twitter:image" content="https://junsuzu14-arch.github.io/danshikai/main.jpg?v=4">
+    <meta name="twitter:image" content="https://junsuzu14-arch.github.io/danshikai/main.jpg?v=5">
 
     <style>
         /* 全体のスタイル（和モダン・シック） */
@@ -235,8 +235,8 @@
             <br>
             この度  新たな夫婦の門出を<br><br>
             祝いまして  <strong style="color: #9e2a2b; font-weight: bold; font-size: 1.1em; border-bottom: 1px solid #9e2a2b; padding-bottom: 2px;">男子会</strong>を開催いたします。<br><br>
-            <br>五山の送り火よりも熱く <br><br>祇園祭の夜よりも賑やかに<br><br>
-            下鴨神社の御水も  沸きあがる<br><br>そんな饗宴にしましょう。<br><br>
+            五山の送り火よりも熱く  祇園祭の夜よりも賑やかに<br><br>
+            下鴨神社の御水も  沸きあがるそんな饗宴にしましょう。<br><br>
             <br>
             皆様のご参加を  心よりお待ちしております。<br><br>
             <br><br>
@@ -269,30 +269,29 @@
         <div class="photo-overlay"></div>
     </div>
 
-    <!-- 正しいIDを完全反映した出欠確認フォームエリア -->
+    <!-- 暗号数値を完全解析・反映した最強の出欠確認フォーム -->
     <div class="form-section" id="formContainer">
         <h2 style="text-align: center; font-size: 18px; margin-bottom: 30px; font-weight: 500;">RSVP / 出欠確認</h2>
         
         <form action="https://docs.google.com/forms/d/e/1FAIpQLSdcbG8SSidSa-ptVvd6u8QOpgAZ74CgvQMum-E0FgMOL3as8A/formResponse" method="POST" target="dummy_iframe" onsubmit="showThankYou()">
             
-            <!-- ご出欠（正確なID: entry.972322307） -->
+            <!-- ご出欠（ID: entry.972322307）※valueに真の選択肢暗号を注入 -->
             <div class="form-group">
                 <label>ご出欠</label>
                 <div class="radio-group">
-                    <label class="radio-label"><input type="radio" name="entry.972322307" value="ご出席" required> ご出席</label>
-                    <label class="radio-label"><input type="radio" name="entry.972322307" value="ご欠席"> ご欠席</label>
+                    <label class="radio-label"><input type="radio" name="entry.972322307" value="731422749" required> ご出席</label>
+                    <label class="radio-label"><input type="radio" name="entry.972322307" value="2054668270"> ご欠席</label>
                 </div>
-                <!-- センチネルタグも正しいIDに修正 -->
                 <input type="hidden" name="entry.972322307_sentinel" value="">
             </div>
 
-            <!-- お名前（正確なID: entry.724775459） -->
+            <!-- お名前（ID: entry.724775459） -->
             <div class="form-group">
                 <label for="name">お名前</label>
-                <input type="text" id="name" name="entry.724775459" placeholder="例：山田 耕筰" required>
+                <input type="text" id="name" name="entry.724775459" placeholder="例：山田 太郎" required>
             </div>
 
-            <!-- メッセージ（正確なID: entry.428789524） -->
+            <!-- メッセージ（ID: entry.428789524） -->
             <div class="form-group">
                 <label for="message">メッセージ（何かあれば）</label>
                 <textarea id="message" name="entry.428789524" rows="4" placeholder="楽しみにしています！など"></textarea>
@@ -338,7 +337,7 @@
         const container = document.getElementById('formContainer');
         container.innerHTML = `
             <div style="text-align: center; padding: 40px 0; animation: fadeIn 0.8s ease forwards;">
-                <h2 style="font-size: 20px; color: #9e2a2b; font-weight: 500; margin-bottom: 15px;">ご回答<br>ありがとうございました！</h2>
+                <h2 style="font-size: 20px; color: #9e2a2b; font-weight: 500; margin-bottom: 15px;">ご回答ありがとうございました！</h2>
                 <p style="font-size: 14px; color: #555; line-height: 1.6;">
                     出欠を正常に受け付けました。<br>
                     皆様とお会いできるのを楽しみにしております！
