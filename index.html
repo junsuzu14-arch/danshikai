@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>男子会のご案内</title>
 
-<meta property="og:title" content="GENTLEMEN'S GATHERING | 男子会のご案内">
+    <!-- ✨ リンク共有時に写真を確実に表示させるための設定（OGP） -->
+    <meta property="og:title" content="GENTLEMEN'S GATHERING | 男子会のご案内">
     <meta property="og:description" content="新たな夫婦の門出を祝しまして、男子会を開催いたします。皆様のご参加を心よりお待ちしております。">
-    <meta property="og:image" content="https://junsuzu14-arch.github.io/danshikai/main.jpg">
+    <!-- 画像のURLの末尾に「?v=1」をつけて最新状態と認識させます -->
+    <meta property="og:image" content="https://junsuzu14-arch.github.io/danshikai/main.jpg?v=1">
+    <meta property="og:url" content="https://junsuzu14-arch.github.io/danshikai/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="男子会のご案内">
+    
+    <!-- SNS用の追加設定 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GENTLEMEN'S GATHERING | 男子会のご案内">
+    <meta name="twitter:description" content="新たな夫婦の門出を祝しまして、男子会を開催いたします。">
+    <meta name="twitter:image" content="https://junsuzu14-arch.github.io/danshikai/main.jpg?v=1">
 
     <style>
         /* 全体のスタイル（和モダン・シック） */
@@ -22,15 +32,29 @@
             letter-spacing: 0.05em;
         }
 
+        /* ✨ ページ全体を開いた時にふわっと浮かび上がらせる設定 */
         .container {
             max-width: 600px;
             margin: 0 auto;
             background: #ffffff;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
             padding-bottom: 40px;
+            
+            /* アニメーションの仕込み */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: pageFadeIn 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
         }
 
-        /* ✨ 写真エリアの初期設定 */
+        /* 画面表示時のアニメーション中身 */
+        @keyframes pageFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 写真エリアの初期設定（スクロール用） */
         .hero, .sub-photo {
             position: relative;
             width: 100%;
@@ -196,7 +220,7 @@
     <!-- 挨拶セクション -->
     <div class="section">
         
-        <!-- ✨ 招待状にふさわしい格調高い見出しデザイン -->
+        <!-- 招待状にふさわしい格調高い見出しデザイン -->
         <div style="text-align: center; padding-top: 10px;">
             <span style="font-size: 12px; letter-spacing: 0.3em; color: #9e2a2b; font-weight: bold; display: block; margin-bottom: 5px;">THE INVITATION</span>
             <div style="font-size: 26px; font-weight: 400; color: #1a252f; margin: 0; letter-spacing: 0.1em; line-height: 1.4; font-family: inherit;">
@@ -207,37 +231,34 @@
         </div>
 
         <p>
-               
-            ご挨拶<br><br>
+            ご挨拶<br>
             <br>
-	    風鈴の音に　涼しさと<br><br>
-	    サウンド・エデュケーションを<br><br>
+            風鈴の音に 涼しさと<br><br>
+            サウンド・エデュケーションを<br><br>
             感じる季節となりました。<br><br>
             梅雨明けが 待ち遠しい今日  この頃<br><br>
             いかがお過ごしでしょうか。<br><br>
             <br>
             この度  新たな夫婦の門出を<br><br>
-            祝いまして<br><br>
-	    <strong style="color: #9e2a2b; font-weight: bold; font-size: 1.1em; border-bottom: 1px solid #9e2a2b; padding-bottom: 2px;">
-	    男子会</strong>を<br><br>
-	    開催いたします。<br><br>
-            五山の送り火よりも熱く<br><br>
+            祝いまして  <strong style="color: #9e2a2b; font-weight: bold; font-size: 1.1em; border-bottom: 1px solid #9e2a2b; padding-bottom: 2px;">男子会</strong>を開催いたします。<br><br>
+            五山の送り火よりも熱く <br><br>
 	    祇園祭の夜よりも賑やかに<br><br>
             下鴨神社の御水も  沸きあがる<br><br>
 	    そんな饗宴にしましょう。<br><br>
             <br>
-            皆様のご参加を  心より<br><br>
-	    お待ちしております。<br><br>
+            皆様のご参加を  心よりお待ちしております。<br><br>
             <br><br>
             謹白
         </p>
     </div>
 
+    <!-- 2枚目 -->
     <div class="sub-photo">
         <img src="sub1.jpg" alt="男子会サブビジュアル1">
         <div class="photo-overlay"></div>
     </div>
 
+    <!-- イベント詳細 -->
     <div class="info-box">
         <div class="info-title">▼ DATE & TIME</div>
         <div class="info-value">2026年8月15日（土） 19:00 開始</div>
@@ -250,16 +271,19 @@
         <div class="info-value">飲みたいだけ持ってこい！<br>社会人がなんとかします。</div>
     </div>
 
+    <!-- 3枚目 -->
     <div class="sub-photo">
         <img src="sub2.jpg" alt="男子会サブビジュアル2">
         <div class="photo-overlay"></div>
     </div>
 
+    <!-- 出席確認フォームエリア -->
     <div class="form-section" id="formContainer">
         <h2 style="text-align: center; font-size: 18px; margin-bottom: 30px; font-weight: 500;">RSVP / 出欠確認</h2>
         
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSdcbG8SSidSa-ptVvd6u8QOpgAZ74CgvQMum-E0FgMOL3as8A/formResponse" method="POST" target="dummy_iframe" onsubmit="showThankYou()">
+        <form action="https://docs.google.com/forms/d/1Cniy0yXqADgWBqCgdK2JVKJLh7UzzVS64MsBFlK2qOE/formResponse" method="POST" target="dummy_iframe" onsubmit="showThankYou()">
             
+            <!-- ご出欠（entry.1599437810） -->
             <div class="form-group">
                 <label>ご出欠</label>
                 <div class="radio-group">
@@ -268,11 +292,13 @@
                 </div>
             </div>
 
+            <!-- お名前（entry.1598192816） -->
             <div class="form-group">
                 <label for="name">お名前</label>
-                <input type="text" id="name" name="entry.1598192816" placeholder="例：山田 太郎" required>
+                <input type="text" id="name" name="entry.1598192816" placeholder="例：山田　耕筰 " required>
             </div>
 
+            <!-- メッセージ（entry.1771175792） -->
             <div class="form-group">
                 <label for="message">メッセージ（何かあれば）</label>
                 <textarea id="message" name="entry.1771175792" rows="4" placeholder="楽しみにしています！など"></textarea>
@@ -282,6 +308,7 @@
         </form>
     </div>
 
+    <!-- 4枚目 -->
     <div class="sub-photo">
         <img src="sub3.jpg" alt="男子会サブビジュアル3">
         <div class="photo-overlay"></div>
@@ -293,8 +320,10 @@
 
 </div>
 
+<!-- 裏側でGoogleの画面遷移を身代わりとなって受ける見えない枠 -->
 <iframe name="dummy_iframe" style="display:none;"></iframe>
 
+<!-- スクリプト処理 -->
 <script>
     // 1. 写真のスクロールアニメーション用
     const observer = new IntersectionObserver((entries) => {
@@ -311,7 +340,7 @@
         observer.observe(photo);
     });
 
-    // 2. ✨ 送信ボタンを押した後にサイト内で「ありがとう」に切り替える演出
+    // 2. 送信ボタンを押した後にサイト内で「ありがとう」に切り替える演出
     function showThankYou() {
         const container = document.getElementById('formContainer');
         container.innerHTML = `
@@ -327,4 +356,4 @@
 </script>
 
 </body>
-</html>　　
+</html>
